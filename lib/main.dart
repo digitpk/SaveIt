@@ -7,8 +7,10 @@ import 'package:saveit/screens/navigationHomeScreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-  await FlutterDownloader.initialize(debug: true // optional: set false to disable printing logs to console
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  await FlutterDownloader.initialize(
+      debug: true // optional: set false to disable printing logs to console
       );
   runApp(new MyApp());
 }
@@ -41,7 +43,12 @@ class _WelcomeLogoState extends State<WelcomeLogo> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NavigationHomeScreen()));
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => NavigationHomeScreen(),
+        ),
+      );
     });
   }
 
